@@ -1,7 +1,7 @@
-package com.renovation.gardenia.admin.mapper;
+package com.renovation.gardenia.module.admin.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.renovation.gardenia.admin.entity.Admin;
+import com.renovation.gardenia.module.admin.entity.Admin;
 import org.springframework.stereotype.Repository;
 
 /**

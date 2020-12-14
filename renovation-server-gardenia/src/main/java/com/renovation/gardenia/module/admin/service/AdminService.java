@@ -1,8 +1,8 @@
-package com.renovation.gardenia.admin.service;
+package com.renovation.gardenia.module.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.renovation.gardenia.admin.dto.AdminDto;
-import com.renovation.gardenia.admin.entity.Admin;
+import com.renovation.gardenia.module.admin.dto.AdminDto;
+import com.renovation.gardenia.module.admin.entity.Admin;
 
 /**
  * @ClassName AdminService

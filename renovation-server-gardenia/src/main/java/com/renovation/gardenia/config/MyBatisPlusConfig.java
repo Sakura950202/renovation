@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @Version 1.0
  **/
 @Configuration
-@MapperScan(basePackages = "com.renovation.gardenia.**.mapper")
+@MapperScan(basePackages = "com.renovation.gardenia.module.**.mapper")
 public class MyBatisPlusConfig {
 
     /**

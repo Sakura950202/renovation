@@ -46,7 +46,7 @@ mybatis-plus:
 #  mapper扫描包
   mapper-locations: classpath:mapper/*.xml
 #  自动扫描pojo包
-  type-aliases-package: com.renovation.gardenia.**.entity
+  type-aliases-package: com.renovation.gardenia.module.**.entity
   configuration:
 #    驼峰转下划线
     map-underscore-to-camel-case: true

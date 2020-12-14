@@ -1,8 +1,8 @@
-package com.renovation.gardenia.admin.mapstruct;
+package com.renovation.gardenia.module.admin.mapstruct;
 
 import com.renovation.common.mapstruct.BaseMapStruct;
-import com.renovation.gardenia.admin.dto.AdminDto;
-import com.renovation.gardenia.admin.entity.Admin;
+import com.renovation.gardenia.module.admin.dto.AdminDto;
+import com.renovation.gardenia.module.admin.entity.Admin;
 import org.mapstruct.Mapper;
 
 /**

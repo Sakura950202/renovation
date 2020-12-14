@@ -1,4 +1,4 @@
-package com.renovation.gardenia.admin.entity;
+package com.renovation.gardenia.module.admin.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.renovation.common.entity.BaseEntity;

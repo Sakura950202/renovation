@@ -34,7 +34,6 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
-//                .apis(RequestHandlerSelectors.basePackage("com.renovation.gardenia.**.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

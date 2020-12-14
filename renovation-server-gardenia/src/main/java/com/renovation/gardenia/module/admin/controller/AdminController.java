@@ -1,7 +1,7 @@
-package com.renovation.gardenia.admin.controller;
+package com.renovation.gardenia.module.admin.controller;
 
-import com.renovation.gardenia.admin.dto.AdminDto;
-import com.renovation.gardenia.admin.service.AdminService;
+import com.renovation.gardenia.module.admin.dto.AdminDto;
+import com.renovation.gardenia.module.admin.service.AdminService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +19,7 @@ import javax.validation.Valid;
  * @Date 2020/12/09 17:06
  * @Version 1.0
  */
-@Api("管理员相关接口")
+@Api(tags = "管理员相关接口")
 @RestController
 @RequestMapping("/admin")
 public class AdminController {

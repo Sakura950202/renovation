@@ -8,7 +8,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
@@ -23,9 +22,10 @@ import java.lang.reflect.Type;
  * 因为SpringBoot默认的ResponseBody的处理程序就是HandlerMethodReturnValueHandler，所以我们自己写的HandlerMethodReturnValueHandler通常无法生效，
  * 非要使用HandlerMethodReturnValueHandler，那么只能替换掉默认的
  * 其实这里就是对Controller层返回的数据做统一处理，处理成自己想要的结果
+ * 下面basePackages参数可以是数组{"com.automvc", "com.test"}，配置为多个包，但是项目是分模块开发，为了不配置每个包，所以将模块放进module包，统一拦截
  **/
 
-@RestControllerAdvice
+@RestControllerAdvice(basePackages = "com.renovation.gardenia.module")
 public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
 
     @Override

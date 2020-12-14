@@ -1,11 +1,11 @@
-package com.renovation.gardenia.admin.service.impl;
+package com.renovation.gardenia.module.admin.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.renovation.gardenia.admin.dto.AdminDto;
-import com.renovation.gardenia.admin.entity.Admin;
-import com.renovation.gardenia.admin.mapper.AdminMapper;
-import com.renovation.gardenia.admin.mapstruct.AdminDtoMapStruct;
-import com.renovation.gardenia.admin.service.AdminService;
+import com.renovation.gardenia.module.admin.dto.AdminDto;
+import com.renovation.gardenia.module.admin.entity.Admin;
+import com.renovation.gardenia.module.admin.mapper.AdminMapper;
+import com.renovation.gardenia.module.admin.mapstruct.AdminDtoMapStruct;
+import com.renovation.gardenia.module.admin.service.AdminService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

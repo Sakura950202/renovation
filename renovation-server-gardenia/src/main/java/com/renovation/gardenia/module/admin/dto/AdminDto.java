@@ -1,4 +1,4 @@
-package com.renovation.gardenia.admin.dto;
+package com.renovation.gardenia.module.admin.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
