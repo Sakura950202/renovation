@@ -40,7 +40,7 @@
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 		</dependency>
 
-<!--		fastJson的依赖-->
+<!--		fastJson的依赖，使用父项目版本号-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
