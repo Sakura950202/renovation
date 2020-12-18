@@ -14,6 +14,14 @@ spring:
     password:
     type: com.alibaba.druid.pool.DruidDataSource
 
+#  配置nacos
+  application:
+    name: nacos-gardenia
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
   #  配置文件传输
   servlet:
     multipart:
