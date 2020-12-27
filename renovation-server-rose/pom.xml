@@ -21,7 +21,6 @@
 <!--    依赖版本信息-->
     <properties>
         <java.version>1.8</java.version>
-        <mybatis.version>2.1.1</mybatis.version>
     </properties>
 
     <dependencies>
@@ -44,7 +43,6 @@
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -63,7 +61,7 @@
             <scope>runtime</scope>
         </dependency>
 
-<!--		druid的依赖-->
+<!--		druid的依赖，使用父项目的版本号-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
@@ -86,7 +84,7 @@
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
 
-<!--		swagger的依赖-->
+<!--		swagger的依赖，使用父项目的版本号-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>

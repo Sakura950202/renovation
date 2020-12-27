@@ -23,12 +23,14 @@
     <modules>
         <module>renovation-server-gardenia</module>
         <module>renovation-server-common</module>
+        <module>renovation-server-rose</module>
     </modules>
 
 <!--    统一管理依赖的版本-->
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <mybatis.version>2.1.1</mybatis.version>
         <druid.version>1.2.1</druid.version>
         <mybatisPlus.version>3.4.0</mybatisPlus.version>
         <swagger2.version>2.9.2</swagger2.version>
@@ -83,6 +85,12 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
 
 <!--            druid的依赖-->
