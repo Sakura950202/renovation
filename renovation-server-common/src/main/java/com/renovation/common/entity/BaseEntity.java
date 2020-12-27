@@ -18,6 +18,7 @@ public class BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -3553523603432589556L;
 
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     @TableField(fill = FieldFill.INSERT)

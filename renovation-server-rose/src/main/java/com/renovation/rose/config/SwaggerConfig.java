@@ -1,4 +1,4 @@
-package com.renovation.gardenia.config;
+package com.renovation.rose.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -43,7 +43,7 @@ public class SwaggerConfig {
                 .termsOfServiceUrl("")
                 .version("1.0")
                 // 作者信息
-                .contact(new Contact("SAKURA", "http://127.0.0.1:8080/gardenia/swagger-ui.html", "email"))
+                .contact(new Contact("SAKURA", "http://127.0.0.1:8081/rose/swagger-ui.html", "email"))
                 .build();
     }
 }

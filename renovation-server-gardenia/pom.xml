@@ -26,6 +26,7 @@
 
 	<dependencies>
 
+<!--		引入common项目的依赖-->
 		<dependency>
 			<groupId>com.renovation</groupId>
 			<artifactId>renovation-server-common</artifactId>
@@ -125,10 +126,7 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+
 		</plugins>
 	</build>
 
