@@ -1,13 +1,11 @@
 package com.renovation.rose.module.customer.controller;
 
 import com.renovation.rose.module.customer.dto.CustomerDto;
+import com.renovation.rose.module.customer.entity.Customer;
 import com.renovation.rose.module.customer.service.CustomerService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -31,5 +29,11 @@ public class CustomerController {
     @PostMapping("/saveOrUpdateCustomer")
     public Boolean saveOrUpdateAdmin(@RequestBody @Valid CustomerDto customerDto) {
         return customerService.saveOrUpdateAdmin(customerDto);
+    }
+
+    @ApiOperation("获取会员")
+    @GetMapping("/getCustomer")
+    public Customer getCustomer(Integer id) {
+        return customerService.getCustomer(id);
     }
 }

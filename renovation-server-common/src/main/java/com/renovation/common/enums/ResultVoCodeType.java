@@ -24,9 +24,7 @@ public enum ResultVoCodeType {
     /**
      * 数据校验失败
      */
-    VALIDATE_FAILED(600, "validateFailed"),
-
-    ;
+    VALIDATE_FAILED(600, "validateFailed");
 
     /**
      * 状态码

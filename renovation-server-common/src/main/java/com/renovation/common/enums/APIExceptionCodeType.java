@@ -7,7 +7,6 @@ import lombok.Getter;
  * @Description: TODO 业务异常信息状态类型
  * @Author: SAKURA
  * @Date: 2020/4/13 20:43
- * @Version 1.0
  **/
 @Getter
 public enum APIExceptionCodeType {
@@ -30,9 +29,7 @@ public enum APIExceptionCodeType {
     /**
      * 数据不能修改
      */
-    DATA_NOTUPDATE("数据不能修改"),
-
-    ;
+    DATA_NOTUPDATE("数据不能修改");
 
     /**
      * 描述

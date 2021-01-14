@@ -1,13 +1,12 @@
 package com.renovation.gardenia.module.admin.controller;
 
+import com.renovation.common.vo.ResultVo;
 import com.renovation.gardenia.module.admin.dto.AdminDto;
+import com.renovation.gardenia.module.admin.feign.TestFeign;
 import com.renovation.gardenia.module.admin.service.AdminService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -27,10 +26,19 @@ public class AdminController {
     @Resource
     private AdminService adminService;
 
+    @Resource
+    private TestFeign testFeign;
+
     @ApiOperation("管理员新增或修改")
     @PostMapping("/saveOrUpdateAdmin")
     public Boolean saveOrUpdateAdmin(@RequestBody @Valid AdminDto adminDto) {
         return adminService.saveOrUpdateAdmin(adminDto);
+    }
+
+    @ApiOperation("获取远程会员信息")
+    @GetMapping("/getFeignCustomer")
+    public ResultVo getFeignCustomer(Integer id){
+        return testFeign.getFeignCustomer(id);
     }
 
 }

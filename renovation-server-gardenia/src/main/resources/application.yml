@@ -16,6 +16,7 @@ spring:
 
 #  配置nacos
   application:
+#    服务名称
     name: nacos-gardenia
   cloud:
     nacos:

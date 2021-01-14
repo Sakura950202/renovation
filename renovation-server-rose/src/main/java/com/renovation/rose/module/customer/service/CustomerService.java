@@ -20,4 +20,11 @@ public interface CustomerService extends IService<Customer> {
      */
     Boolean saveOrUpdateAdmin(CustomerDto customerDto);
 
+    /**
+     * 获取会员
+     * @param id 会员id
+     * @return 会员详情
+     */
+    Customer getCustomer(Integer id);
+
 }

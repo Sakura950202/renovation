@@ -44,4 +44,10 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
         Customer customer = customerDtoMapStruct.toEntity(customerDto);
         return this.saveOrUpdate(customer);
     }
+
+    @Override
+    public Customer getCustomer(Integer id) {
+        Customer customer = this.getById(id);
+        return customer;
+    }
 }
