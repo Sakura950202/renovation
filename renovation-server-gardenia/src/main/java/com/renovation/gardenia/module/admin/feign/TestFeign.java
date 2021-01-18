@@ -1,10 +1,8 @@
 package com.renovation.gardenia.module.admin.feign;
 
 import com.renovation.common.constant.FeignConstant;
-import com.renovation.common.vo.ResultVo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -16,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = FeignConstant.ROSE)
 public interface TestFeign {
 
-    @GetMapping("/customer/getCustomer")
-    ResultVo getFeignCustomer(@RequestParam("id") Integer id);
+    @GetMapping("/rose/customer/getCustomer")
+    Object getFeignCustomer(@RequestParam("id") Integer id);
 
 }
