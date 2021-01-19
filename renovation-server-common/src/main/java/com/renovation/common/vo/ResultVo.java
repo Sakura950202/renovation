@@ -1,6 +1,7 @@
 package com.renovation.common.vo;
 
 import com.renovation.common.enums.ResultVoCodeType;
+import lombok.Data;
 import lombok.Getter;
 
 /**
@@ -9,7 +10,7 @@ import lombok.Getter;
  * @Author: SAKURA
  * @Date: 2020/4/5 17:25
  **/
-@Getter
+@Data
 public class ResultVo<T> {
 
     /**
@@ -26,6 +27,8 @@ public class ResultVo<T> {
      * 响应数据
      */
     private T data;
+
+    public ResultVo() {}
 
     public ResultVo(T data) {
         this.data = data;

@@ -16,7 +16,7 @@ spring:
 
 #  配置nacos
   application:
-    name: nacos-rose
+    name: server-rose
   cloud:
     nacos:
       discovery:

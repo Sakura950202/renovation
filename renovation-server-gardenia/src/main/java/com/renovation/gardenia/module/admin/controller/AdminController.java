@@ -1,7 +1,8 @@
 package com.renovation.gardenia.module.admin.controller;
 
+import com.renovation.common.vo.ResultVo;
 import com.renovation.gardenia.module.admin.dto.AdminDto;
-import com.renovation.gardenia.module.admin.feign.TestFeign;
+import com.renovation.gardenia.module.feign.TestFeign;
 import com.renovation.gardenia.module.admin.service.AdminService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -36,7 +37,7 @@ public class AdminController {
 
     @ApiOperation("获取远程会员信息")
     @GetMapping("/getFeignCustomer")
-    public Object getFeignCustomer(Integer id){
+    public ResultVo getFeignCustomer(Integer id){
         return testFeign.getFeignCustomer(id);
     }
 

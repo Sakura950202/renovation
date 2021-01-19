@@ -38,7 +38,7 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
                         .eq(StringUtils.isNotBlank(customerDto.getName()), Customer::getName, customerDto.getName())
         );
         if (Objects.nonNull(customerTemp)) {
-            throw new APIException(APIExceptionCodeType.DATA_HASEXISTS);
+            throw new APIException(APIExceptionCodeType.DATA_HAS_EXISTS);
         }
         // 执行新增会修改
         Customer customer = customerDtoMapStruct.toEntity(customerDto);

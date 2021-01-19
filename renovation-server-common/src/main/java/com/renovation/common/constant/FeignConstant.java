@@ -13,11 +13,11 @@ public class FeignConstant {
     /**
      * gardenia远程服务名
      */
-    public static final String GARDENIA = "nacos-gardenia";
+    public static final String GARDENIA = "server-gardenia";
 
     /**
      * rose远程服务名
      */
-    public static final String ROSE = "nacos-rose";
+    public static final String ROSE = "server-rose";
 
 }
