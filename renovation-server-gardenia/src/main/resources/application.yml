@@ -65,6 +65,8 @@ ribbon:
 
 #配置hystrix
 hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
   command:
     default:
       execution:
@@ -77,6 +79,12 @@ hystrix:
         requestVolumeThreshold: 3
 #        默认5S ， 等5S之后熔断器会处于半开状态，然后下一次请求的正确和错误讲决定熔断器是否真的关闭和是否继续打开
         sleepWindowInMilliseconds: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 #配置mybatis-plus
 mybatis-plus:

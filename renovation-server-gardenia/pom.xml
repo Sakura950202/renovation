@@ -126,6 +126,18 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
+<!--		hystrix-dashboard的依赖，使用父项目的版本号-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+		</dependency>
+
+<!--		actuator的依赖，使用父项目的版本号-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>

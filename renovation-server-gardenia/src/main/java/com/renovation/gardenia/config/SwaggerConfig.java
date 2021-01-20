@@ -43,7 +43,7 @@ public class SwaggerConfig {
                 .termsOfServiceUrl("")
                 .version("1.0")
                 // 作者信息
-                .contact(new Contact("SAKURA", "http://127.0.0.1:8080/gardenia/swagger-ui.html", "email"))
+                .contact(new Contact("SAKURA", "http://127.0.0.1:8081/gardenia/swagger-ui.html", "email"))
                 .build();
     }
 }
