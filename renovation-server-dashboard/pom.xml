@@ -15,6 +15,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>renovation-server-dashboard</name>
     <description>dashboard</description>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
@@ -38,6 +39,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
 <!--        openfeign的依赖，内部包含ribbon、hystrix，使用父项目的版本号-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -54,7 +60,10 @@
 
     <build>
         <plugins>
-
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
 
