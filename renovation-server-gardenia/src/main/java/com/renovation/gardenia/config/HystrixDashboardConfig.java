@@ -7,9 +7,11 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @ClassName HystrixDashboardConfig
- * @Description TODO
+ * @Description TODO 配置Hystrix的图形控制面板
  * @Author SAKURA
  * @Date 2021/01/20 13:07
+ *
+ * 监控地址http://127.0.0.1:8081/gardenia/actuator/hystrix.stream
  */
 @Configuration
 public class HystrixDashboardConfig {

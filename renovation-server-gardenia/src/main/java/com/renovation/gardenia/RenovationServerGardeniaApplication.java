@@ -17,14 +17,4 @@ public class RenovationServerGardeniaApplication {
 		SpringApplication.run(RenovationServerGardeniaApplication.class, args);
 	}
 
-	@Bean(name = "hystrixRegistrationBean")
-	public ServletRegistrationBean servletRegistrationBean() {
-		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
-		ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
-		registrationBean.setLoadOnStartup(1);
-		registrationBean.addUrlMappings("/actuator/hystrix.stream");
-		registrationBean.setName("HystrixMetricsStreamServlet");
-		return registrationBean;
-	}
-
 }
