@@ -55,6 +55,13 @@ feign:
   hystrix:
     enabled: true
 
+#结合hystrix dashboard控制面板时，通过HTTP实现一个actuator端点，它需要被启用并公开，默认是只公开heath和info两个端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 #配置ribbon，这里可以只配置ribbon的超时时间，不需要下面的hystrix的超时时间。
 #因为ribbon的配置是要大于hystrix的，feign的底层是ribbon的封装的，所以直接配置ribbon
 ribbon:
@@ -65,8 +72,6 @@ ribbon:
 
 #配置hystrix
 hystrix:
-  dashboard:
-    proxy-stream-allow-list: "*"
   command:
     default:
       execution:
@@ -79,12 +84,6 @@ hystrix:
         requestVolumeThreshold: 3
 #        默认5S ， 等5S之后熔断器会处于半开状态，然后下一次请求的正确和错误讲决定熔断器是否真的关闭和是否继续打开
         sleepWindowInMilliseconds: 5000
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
 
 #配置mybatis-plus
 mybatis-plus:

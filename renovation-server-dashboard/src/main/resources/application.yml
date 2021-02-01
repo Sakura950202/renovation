@@ -1,10 +1,7 @@
 server:
   port: 8080
 
-spring:
-  application:
-    name: server-dashboard
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
+#  将ip配置到proxyStreamAllowList
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: ["127.0.0.1"]

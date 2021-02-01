@@ -1,10 +1,10 @@
 package com.renovation.dashboard;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
-@SpringCloudApplication //相当于这三个注解@SpringBootApplication @EnableDiscoveryClient @EnableCircuitBreaker
+@SpringBootApplication
 @EnableHystrixDashboard
 public class RenovationServerDashboardApplication {
 

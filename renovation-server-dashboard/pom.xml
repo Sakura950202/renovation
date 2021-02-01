@@ -39,11 +39,6 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
 <!--        openfeign的依赖，内部包含ribbon、hystrix，使用父项目的版本号-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
