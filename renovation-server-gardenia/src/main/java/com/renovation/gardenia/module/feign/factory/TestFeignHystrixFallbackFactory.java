@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
  * @Description TODO 用来处理测试远程调用服务降级
  * @Author SAKURA
  * @Date 2021/1/19 22:58
- * @Version 1.0
  */
 @Component
 @Log4j2

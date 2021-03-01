@@ -25,6 +25,7 @@
         <module>renovation-server-dashboard</module>
         <module>renovation-server-gardenia</module>
         <module>renovation-server-rose</module>
+        <module>renovation-server-gateway</module>
     </modules>
 
 <!--    统一管理依赖的版本-->
@@ -43,6 +44,7 @@
         <feign.version>2.2.6.RELEASE</feign.version>
         <hystrix-dashboard.version>2.2.6.RELEASE</hystrix-dashboard.version>
         <actuator.version>2.2.6.RELEASE</actuator.version>
+        <gateway.version>2.2.6.RELEASE</gateway.version>
     </properties>
 
 <!--    dependencies即使在子项目中不写该依赖项，那么子项目仍然会从父项目中继承该依赖项（全部继承）-->
@@ -182,6 +184,12 @@
                 <version>${actuator.version}</version>
             </dependency>
 
+<!--            gateway的依赖-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${gateway.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

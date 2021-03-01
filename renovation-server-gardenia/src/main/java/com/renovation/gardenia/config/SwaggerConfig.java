@@ -17,9 +17,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @Description TODO swagger接口文档配置类
  * @Author SAKURA
  * @Date 2020/12/09 17:07
- * @Version 1.0
- *
- * 目前只在dev环境和test环境使用
  */
 @Configuration
 @EnableSwagger2

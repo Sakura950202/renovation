@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: server-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      enabled: true
+      routes:
+        - id: renovation-server-gardenia
+          uri: http://127.0.0.1:8081/
+          predicates:
+            - Path=/admin/**

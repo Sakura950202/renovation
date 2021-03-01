@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
  * @Description TODO 基础实体类
  * @Author SAKURA
  * @Date 2020/12/09 16:49
- * @Version 1.0
  */
 @Data
 public class BaseEntity implements Serializable {

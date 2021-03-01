@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
  * @Description: TODO MybatisPlus配置类
  * @Author: SAKURA
  * @Date: 2020/5/4 17:47
- * @Version 1.0
  **/
 @Configuration
 @MapperScan(basePackages = "com.renovation.gardenia.module.**.mapper")

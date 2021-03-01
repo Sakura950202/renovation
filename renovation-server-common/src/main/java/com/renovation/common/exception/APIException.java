@@ -8,7 +8,6 @@ import lombok.Getter;
  * @Description: TODO 用来处理程序中的业务异常类
  * @Author: SAKURA
  * @Date: 2020/4/8 22:02
- * @Version 1.0
  **/
 @Getter
 public class APIException extends RuntimeException {
