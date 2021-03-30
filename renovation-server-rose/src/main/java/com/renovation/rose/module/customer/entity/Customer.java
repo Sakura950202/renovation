@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * @ClassName Customer
@@ -24,4 +25,8 @@ public class Customer extends BaseEntity implements Serializable {
      * 名称
      */
     private String name;
+
+    private LocalDateTime createTime;
+
+    private LocalDateTime time;
 }

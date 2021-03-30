@@ -31,6 +31,8 @@
 <!--    统一管理依赖的版本-->
     <properties>
         <java.version>1.8</java.version>
+        <spring-boot-web.version>2.4.2</spring-boot-web.version>
+        <spring-boot-test.version>2.4.2</spring-boot-test.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <mybatis.version>2.1.1</mybatis.version>
         <druid.version>1.2.1</druid.version>
@@ -72,7 +74,7 @@
 
 <!--    dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显示的声明需要用的依赖。-->
 <!--    如果不在子项目中声明依赖，是不会从父项目中继承下来的；-->
-<!--    只有在子项目中写了该依赖项，并且没有指定具体版本，才会从父项目中继承该项，并且version和scope都读取自父pom;-->
+<!--    只有在子项目中写了该依赖项，并且没有指定具体版本，才会从父项目中继承该项，并且version和scope都读取自父pom；-->
 <!--    另外如果子项目中指定了版本号，那么会使用子项目中指定的jar版本。-->
     <dependencyManagement>
         <dependencies>
@@ -80,11 +82,13 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-web.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-test.version}</version>
                 <scope>test</scope>
             </dependency>
 

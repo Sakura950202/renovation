@@ -48,7 +48,6 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
     @Override
     public Customer getCustomer(Integer id) {
         Customer customer = this.getById(id);
-        String name = customer.getName();
         return customer;
     }
 }

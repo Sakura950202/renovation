@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import java.time.LocalDateTime;
 
 /**
  * @ClassName CustomerDto
@@ -22,5 +23,7 @@ public class CustomerDto {
     @ApiModelProperty("管理员姓名")
     @NotBlank(message = "管理员姓名不能为空")
     private String name;
+
+    private LocalDateTime time;
 
 }
