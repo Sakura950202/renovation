@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-<!--	声明父项目为renovation-server -->
+    <!--	声明父项目为renovation-server -->
     <parent>
         <groupId>com.renovation</groupId>
         <artifactId>renovation-server</artifactId>
@@ -23,19 +23,19 @@
 
     <dependencies>
 
-<!--		nacos的依赖，使用父项目的版本号-->
+        <!--		nacos的依赖，使用父项目的版本号-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
-<!--        openfeign的依赖，内部包含ribbon、hystrix，使用父项目的版本号-->
+        <!--        openfeign的依赖，内部包含ribbon、hystrix，使用父项目的版本号-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
-<!--        hystrix-dashboard的依赖，使用父项目的版本-->
+        <!--        hystrix-dashboard的依赖，使用父项目的版本-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>

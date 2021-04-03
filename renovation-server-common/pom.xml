@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-<!--	声明父项目为renovation-server-->
-	<parent>
-		<groupId>com.renovation</groupId>
-		<artifactId>renovation-server</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
+    <!--	声明父项目为renovation-server-->
+    <parent>
+        <groupId>com.renovation</groupId>
+        <artifactId>renovation-server</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
-<!--	项目的版本信息-->
-	<groupId>com.renovation</groupId>
-	<artifactId>renovation-server-common</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>renovation-server-common</name>
-	<description>common</description>
-	<packaging>jar</packaging>
+    <!--	项目的版本信息-->
+    <groupId>com.renovation</groupId>
+    <artifactId>renovation-server-common</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>renovation-server-common</name>
+    <description>common</description>
+    <packaging>jar</packaging>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
 
-<!--		mybatis-plus的依赖，使用父项目版本号-->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-boot-starter</artifactId>
-		</dependency>
+        <!--		mybatis-plus的依赖，使用父项目版本号-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
 
-<!--		fastJson的依赖，使用父项目版本号-->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-		</dependency>
+        <!--		fastJson的依赖，使用父项目版本号-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
 
-<!--		mapstruct的依赖，使用父项目的版本号-->
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct-jdk8</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct-processor</artifactId>
-		</dependency>
+        <!--		mapstruct的依赖，使用父项目的版本号-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
-	<build>
-		<plugins>
+    <build>
+        <plugins>
 
-		</plugins>
-	</build>
+        </plugins>
+    </build>
 
 </project>

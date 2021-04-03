@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-<!--    这里声明父项目继承于SpringBoot的工程-->
+    <!--    这里声明父项目继承于SpringBoot的工程-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -11,7 +11,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-<!--    父项目的版本信息-->
+    <!--    父项目的版本信息-->
     <groupId>com.renovation</groupId>
     <artifactId>renovation-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -19,16 +19,18 @@
     <name>renovation-server</name>
     <description>Demo project for Spring Boot</description>
 
-<!--    声明子模块-->
+    <!--    声明子模块-->
     <modules>
         <module>renovation-server-common</module>
         <module>renovation-server-dashboard</module>
         <module>renovation-server-gardenia</module>
         <module>renovation-server-rose</module>
         <module>renovation-server-gateway</module>
+        <module>renovation-server-peony</module>
+        <module>renovation-server-epiphyllum</module>
     </modules>
 
-<!--    统一管理依赖的版本-->
+    <!--    统一管理依赖的版本-->
     <properties>
         <java.version>1.8</java.version>
         <spring-boot-web.version>2.4.2</spring-boot-web.version>
@@ -49,7 +51,7 @@
         <gateway.version>2.2.6.RELEASE</gateway.version>
     </properties>
 
-<!--    dependencies即使在子项目中不写该依赖项，那么子项目仍然会从父项目中继承该依赖项（全部继承）-->
+    <!--    dependencies即使在子项目中不写该依赖项，那么子项目仍然会从父项目中继承该依赖项（全部继承）-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -63,7 +65,7 @@
             <optional>true</optional>
         </dependency>
 
-<!--        lombok的依赖-->
+        <!--        lombok的依赖-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -72,10 +74,10 @@
 
     </dependencies>
 
-<!--    dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显示的声明需要用的依赖。-->
-<!--    如果不在子项目中声明依赖，是不会从父项目中继承下来的；-->
-<!--    只有在子项目中写了该依赖项，并且没有指定具体版本，才会从父项目中继承该项，并且version和scope都读取自父pom；-->
-<!--    另外如果子项目中指定了版本号，那么会使用子项目中指定的jar版本。-->
+    <!--    dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显示的声明需要用的依赖。-->
+    <!--    如果不在子项目中声明依赖，是不会从父项目中继承下来的；-->
+    <!--    只有在子项目中写了该依赖项，并且没有指定具体版本，才会从父项目中继承该项，并且version和scope都读取自父pom；-->
+    <!--    另外如果子项目中指定了版本号，那么会使用子项目中指定的jar版本。-->
     <dependencyManagement>
         <dependencies>
 
@@ -92,7 +94,7 @@
                 <scope>test</scope>
             </dependency>
 
-<!--            spring-cloud的依赖，注意使用的版本号要和springBoot的版本号对应-->
+            <!--            spring-cloud的依赖，注意使用的版本号要和springBoot的版本号对应-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -107,21 +109,21 @@
                 <version>${mybatis.version}</version>
             </dependency>
 
-<!--            druid的依赖-->
+            <!--            druid的依赖-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
 
-<!--            mybatis-plus的依赖-->
+            <!--            mybatis-plus的依赖-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatisPlus.version}</version>
             </dependency>
 
-<!--            swagger的依赖-->
+            <!--            swagger的依赖-->
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
@@ -133,7 +135,7 @@
                 <version>${swagger2.version}</version>
             </dependency>
 
-<!--            valid数据验证的依赖-->
+            <!--            valid数据验证的依赖-->
             <dependency>
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
@@ -145,14 +147,14 @@
                 <version>${hibernate.validator.version}</version>
             </dependency>
 
-<!--            fastJson的依赖-->
+            <!--            fastJson的依赖-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
 
-<!--            mapstruct的依赖-->
+            <!--            mapstruct的依赖-->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-jdk8</artifactId>
@@ -164,35 +166,35 @@
                 <version>${mapstruct.version}</version>
             </dependency>
 
-<!--            nacos的依赖-->
+            <!--            nacos的依赖-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>${nacos.version}</version>
             </dependency>
 
-<!--            openfeign的依赖，内部包含ribbon、hystrix-->
+            <!--            openfeign的依赖，内部包含ribbon、hystrix-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
                 <version>${feign.version}</version>
             </dependency>
 
-<!--            hystrix-dashboard的依赖-->
+            <!--            hystrix-dashboard的依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
                 <version>${hystrix-dashboard.version}</version>
             </dependency>
 
-<!--            actuator的依赖-->
+            <!--            actuator的依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${actuator.version}</version>
             </dependency>
 
-<!--            gateway的依赖-->
+            <!--            gateway的依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-gateway</artifactId>

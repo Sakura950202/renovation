@@ -21,13 +21,13 @@
 
     <dependencies>
 
-<!--        gateway的依赖，使用父项目的版本号-->
+        <!--        gateway的依赖，使用父项目的版本号-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
-<!--		nacos的依赖，使用父项目的版本号-->
+        <!--		nacos的依赖，使用父项目的版本号-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
