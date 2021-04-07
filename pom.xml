@@ -36,9 +36,12 @@
         <spring-boot-web.version>2.4.2</spring-boot-web.version>
         <spring-boot-test.version>2.4.2</spring-boot-test.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <mysql.version>8.0.23</mysql.version>
         <mybatis.version>2.1.1</mybatis.version>
         <druid.version>1.2.1</druid.version>
-        <mybatisPlus.version>3.4.0</mybatisPlus.version>
+        <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.4.1</mybatis-plus-generator.version>
+        <velocity.version>2.3</velocity.version>
         <swagger2.version>2.9.2</swagger2.version>
         <validation.version>2.0.1.Final</validation.version>
         <hibernate.validator.version>6.1.0.Final</hibernate.validator.version>
@@ -49,6 +52,7 @@
         <hystrix-dashboard.version>2.2.6.RELEASE</hystrix-dashboard.version>
         <actuator.version>2.2.6.RELEASE</actuator.version>
         <gateway.version>2.2.6.RELEASE</gateway.version>
+        <poi.version>4.1.2</poi.version>
     </properties>
 
     <!--    dependencies即使在子项目中不写该依赖项，那么子项目仍然会从父项目中继承该依赖项（全部继承）-->
@@ -103,6 +107,14 @@
                 <scope>import</scope>
             </dependency>
 
+            <!--            mysql的依赖-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!--            mybatis的依赖-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -120,10 +132,24 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatisPlus.version}</version>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
-            <!--            swagger的依赖-->
+            <!--            mybatis-plus-generator的依赖-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+            </dependency>
+
+            <!--            Velocity代码生成模板引擎的依赖-->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+
+            <!--            swagger2的依赖-->
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
@@ -199,6 +225,23 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-gateway</artifactId>
                 <version>${gateway.version}</version>
+            </dependency>
+
+            <!--            poi导出excel的依赖-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-schemas</artifactId>
+                <version>${poi.version}</version>
             </dependency>
 
         </dependencies>
