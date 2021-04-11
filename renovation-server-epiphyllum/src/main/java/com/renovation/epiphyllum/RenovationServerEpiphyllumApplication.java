@@ -1,9 +1,13 @@
 package com.renovation.epiphyllum;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication
+@SpringCloudApplication
+@EnableFeignClients
+@EnableApolloConfig
 public class RenovationServerEpiphyllumApplication {
 
     public static void main(String[] args) {

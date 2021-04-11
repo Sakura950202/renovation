@@ -11,13 +11,23 @@ import lombok.Getter;
 public class FeignConstant {
 
     /**
-     * gardenia远程服务名
+     * gardenia服务名
      */
-    public static final String GARDENIA = "server-gardenia";
+    public static final String GARDENIA = "server-renovation-gardenia";
 
     /**
-     * rose远程服务名
+     * rose服务名
      */
-    public static final String ROSE = "server-rose";
+    public static final String ROSE = "server-renovation-rose";
+
+    /**
+     * peony服务名
+     */
+    public static final String PEONY = "server-renovation-peony";
+
+    /**
+     * epiphyllum服务名
+     */
+    public static final String EPIPHYLLUM = "server-renovation-epiphyllum";
 
 }

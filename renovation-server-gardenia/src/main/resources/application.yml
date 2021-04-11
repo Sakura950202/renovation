@@ -1,104 +1,29 @@
-server:
-  #  项目端口配置
-  port: 8081
-  #  项目资源路径配置
-  servlet:
-    context-path: /gardenia
-
-#配置数据源
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/gardenia?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=CTT
-    username: root
-    password:
-    type: com.alibaba.druid.pool.DruidDataSource
-
-#  配置nacos
   application:
-#    服务名称
-    name: server-gardenia
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
+    #    服务名称
+    name: server-renovation-gardenia
 
-  #  配置文件传输
-  servlet:
-    multipart:
-      enabled: true
-      file-size-threshold: 0
-      max-file-size: 200MB
-      max-request-size: 600MB
-
-#  配置redis缓存
-  redis:
-    database: 0
-    host: 127.0.0.1
-    port: 6379
-    password:
-    jedis:
-      pool:
-#        配置连接池最大连接数（使用负值表示没有限制）
-        max-active: 8
-#        配置连接池最大阻塞等待时间（使用负值表示没有限制）
-        max-wait: -1
-#        配置连接池中的最大空闲连接
-        max-idle: 8
-#        配置连接池中的最小空闲连接
-        min-idle: 0
-#    配置连接超时时间（毫秒）
-    timeout: 300
-
-#配置feign
-feign:
-  hystrix:
+#apollo的配置
+app:
+  #  apollo应用id
+  id: ${spring.application.name}
+apollo:
+  #  为要配置的集群名称，如果没有可不填
+  #  cluster: test
+  #  为了防止配置中心无法连接等问题，Apollo 会自动将配置本地缓存一份
+  cacheDir: /opt/data/
+  #  DEV环境配置中心地址
+  meta: http://127.0.0.1:8080
+  #  开启 Spring 参数自动更新
+  autoUpdateInjectedSpringProperties: true
+  bootstrap:
+    #    是否开启 Apollo
     enabled: true
+    #    指定使用哪个 Namespace 的配置，默认 application
+    namespaces: application,application.yml
+    eagerLoad:
+      #      将 Apollo 加载提到初始化日志系统之前，如果设置为 false，那么将打印出 Apollo 的日志信息，但是由于打印 Apollo 日志信息需要日志先启动，启动后无法对日志配置进行修改，所以 Apollo 不能管理应用的日志配置
+      enabled: false
 
-#结合hystrix dashboard控制面板时，通过HTTP实现一个actuator端点，它需要被启用并公开，默认是只公开heath和info两个端点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-#配置ribbon，这里可以只配置ribbon的超时时间，不需要下面的hystrix的超时时间。
-#因为ribbon的配置是要大于hystrix的，feign的底层是ribbon的封装的，所以直接配置ribbon
-ribbon:
-#  处理请求的超时时间 默认5秒
-  ReadTimeout: 5000
-#  连接建立的超时时长 默认5秒
-  ConnectTimeout: 5000
-
-#配置hystrix
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-#            feign整合hystrix，光设置Hystrix超时没用的要配合ribbon超时
-            timeoutInMilliseconds: 5000
-      circuitBreaker:
-#        默认20，熔断的阈值，如果服务报错满足3次，熔断器就会打开，就算order之后请求正确的数据也不行
-        requestVolumeThreshold: 3
-#        默认5S ， 等5S之后熔断器会处于半开状态，然后下一次请求的正确和错误讲决定熔断器是否真的关闭和是否继续打开
-        sleepWindowInMilliseconds: 5000
-
-#配置mybatis-plus
-mybatis-plus:
-#  mapper扫描包
-  mapper-locations: classpath:mapper/*.xml
-#  自动扫描pojo包
-  type-aliases-package: com.renovation.gardenia.module.**.entity
-  configuration:
-#    驼峰转下划线
-    map-underscore-to-camel-case: true
-  global-config:
-    db-config:
-#      主键类型
-      id-type: auto
-
-#配置日志
-logging:
-  config: classpath:log4j2-spring.xml
+#  为要获取的配置环境
+env: DEV

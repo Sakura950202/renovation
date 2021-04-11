@@ -1,21 +1,30 @@
-server:
-  port: 8090
-
 spring:
   application:
-    name: server-gateway
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-    gateway:
-      enabled: true
-      routes:
-        - id: renovation-server-gardenia
-          uri: http://127.0.0.1:8081/
-          predicates:
-            - Path=/gardenia/**
-        - id: renovation-server-rose
-          uri: http://127.0.0.1:8082/
-          predicates:
-            - Path=/rose/**
+    #    服务名称
+    name: server-renovation-gateway
+
+#apollo的配置
+app:
+  #  apollo应用id
+  id: ${spring.application.name}
+apollo:
+  #  为要配置的集群名称，如果没有可不填
+  #  cluster: test
+  #  为了防止配置中心无法连接等问题，Apollo 会自动将配置本地缓存一份
+  cacheDir: /opt/data/
+  #  DEV环境配置中心地址
+  meta: http://127.0.0.1:8080
+  #  开启 Spring 参数自动更新
+  autoUpdateInjectedSpringProperties: true
+  bootstrap:
+    #    是否开启 Apollo
+    enabled: true
+    #    指定使用哪个 Namespace 的配置，默认 application
+    namespaces: application,application.yml
+    eagerLoad:
+      #      将 Apollo 加载提到初始化日志系统之前，如果设置为 false，那么将打印出 Apollo 的日志信息，
+      #      但是由于打印 Apollo 日志信息需要日志先启动，启动后无法对日志配置进行修改，所以 Apollo 不能管理应用的日志配置
+      enabled: false
+
+#  为要获取的配置环境
+env: DEV
