@@ -1,7 +1,6 @@
 package com.renovation.gardenia.module.admin.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.renovation.common.entity.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -17,7 +16,7 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode
 @TableName("gardenia_admin")
-public class Admin extends BaseEntity implements Serializable {
+public class Admin implements Serializable {
 
     private static final long serialVersionUID = -724755143507268656L;
 

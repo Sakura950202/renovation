@@ -10,9 +10,9 @@
         <!-- %logger{36} 表示 Logger 名字最长36个字符 -->
         <property name="LOG_PATTERN" value="%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
         <!-- 定义日志存储的路径 -->
-        <property name="FILE_PATH" value="D:/BC/SAKURA/log/peony" />
+        <property name="FILE_PATH" value="D:/BC/SAKURA/log/lotus" />
         <!-- 定义日志存储的文件名-->
-        <property name="FILE_NAME" value="peony" />
+        <property name="FILE_NAME" value="lotus" />
     </Properties>
 
     <appenders>

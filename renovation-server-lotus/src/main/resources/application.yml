@@ -1,7 +1,7 @@
 spring:
   application:
     #    服务名称
-    name: server-renovation-peony
+    name: server-renovation-lotus
 
 #apollo的配置
 app:
@@ -11,7 +11,7 @@ apollo:
   #  为要配置的集群名称，如果没有可不填
   #  cluster: test
   #  为了防止配置中心无法连接等问题，Apollo 会自动将配置本地缓存一份
-  cacheDir: /opt/data/
+  #  cacheDir: /opt/data/
   #  DEV环境配置中心地址
   meta: http://127.0.0.1:8080
   #  开启 Spring 参数自动更新

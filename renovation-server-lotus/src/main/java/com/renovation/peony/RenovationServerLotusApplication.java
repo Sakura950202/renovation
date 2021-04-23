@@ -8,10 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringCloudApplication
 @EnableFeignClients
 @EnableApolloConfig
-public class RenovationServerPeonyApplication {
+public class RenovationServerLotusApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RenovationServerPeonyApplication.class, args);
+        SpringApplication.run(RenovationServerLotusApplication.class, args);
     }
 
 }

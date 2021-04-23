@@ -1,37 +1,38 @@
 package com.renovation.common.annotation;
 
+import org.apache.poi.ss.usermodel.IndexedColors;
+
 import java.lang.annotation.*;
 
 /**
  * @ClassName ExcelAttribute
- * @Description TODO 自定义Excel导出注解
+ * @Description TODO 自定义Excel导出普通属性注解
  * @Author SAKURA
  * @Date 2021/3/22 9:58
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-@Documented
 public @interface ExcelAttribute {
 
     /**
-     * 属性名
+     * 单元格名称
      *
      * @return
      */
     String name() default "";
 
     /**
-     * 序号
+     * 单元格数据格式
      *
      * @return
      */
-    int sort();
+    String[] format() default "";
 
     /**
-     * 格式
+     * 单元格字体颜色
      *
      * @return
      */
-    String format() default "";
+    IndexedColors color() default IndexedColors.BLACK;
 
 }

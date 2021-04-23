@@ -53,6 +53,12 @@
             <artifactId>velocity-engine-core</artifactId>
         </dependency>
 
+        <!--        valid数据验证的依赖，使用父项目版本号-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+
         <!--		fastJson的依赖，使用父项目版本号-->
         <dependency>
             <groupId>com.alibaba</groupId>

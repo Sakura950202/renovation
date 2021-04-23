@@ -12,10 +12,10 @@
 
     <!--    项目的版本信息-->
     <groupId>com.renovation</groupId>
-    <artifactId>renovation-server-peony</artifactId>
+    <artifactId>renovation-server-lotus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>renovation-server-peony</name>
-    <description>peony</description>
+    <name>renovation-server-lotus</name>
+    <description>lotus</description>
 
     <!--    依赖版本信息-->
     <properties>
