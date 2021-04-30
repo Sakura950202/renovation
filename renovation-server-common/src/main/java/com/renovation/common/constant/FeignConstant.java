@@ -23,7 +23,7 @@ public class FeignConstant {
     /**
      * peony服务名
      */
-    public static final String PEONY = "server-renovation-peony";
+    public static final String LOTUS = "server-renovation-lotus";
 
     /**
      * epiphyllum服务名

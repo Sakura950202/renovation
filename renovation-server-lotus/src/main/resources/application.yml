@@ -13,7 +13,7 @@ apollo:
   #  为了防止配置中心无法连接等问题，Apollo 会自动将配置本地缓存一份
   #  cacheDir: /opt/data/
   #  DEV环境配置中心地址
-  meta: http://127.0.0.1:8080
+  meta: http://127.0.0.1:8071
   #  开启 Spring 参数自动更新
   autoUpdateInjectedSpringProperties: true
   bootstrap:

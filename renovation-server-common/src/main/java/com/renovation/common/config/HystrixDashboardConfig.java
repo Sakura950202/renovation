@@ -1,4 +1,4 @@
-package com.renovation.gardenia.config;
+package com.renovation.common.config;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -7,11 +7,11 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @ClassName HystrixDashboardConfig
- * @Description TODO 配置Hystrix的图形控制面板
+ * @Description TODO Hystrix的图形控制面板配置
  * @Author SAKURA
  * @Date 2021/01/20 13:07
  *
- * 监控地址http://127.0.0.1:8081/gardenia/actuator/hystrix.stream
+ * 监控地址示例：http://127.0.0.1:9001/gardenia/actuator/hystrix.stream
  */
 @Configuration
 public class HystrixDashboardConfig {
