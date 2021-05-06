@@ -1,7 +1,7 @@
-package com.renovation.rose.advice;
+package com.renovation.gardenia.config;
 
 import com.alibaba.fastjson.JSON;
-import com.renovation.common.enums.ResultVoCodeType;
+import com.renovation.common.enums.ResultVoCode;
 import com.renovation.common.vo.ResultVo;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -25,7 +25,7 @@ import java.lang.reflect.Type;
  * 下面basePackages参数可以是数组{"com.automvc", "com.test"}，配置为多个包，但是项目是分模块开发，为了不配置每个包，所以将模块放进module包，统一拦截
  **/
 
-@RestControllerAdvice(basePackages = "com.renovation.rose.module")
+@RestControllerAdvice(basePackages = "com.renovation.gardenia.module")
 public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
 
     @Override
@@ -43,7 +43,7 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
         // String类型不能直接包装，所以要进行些特别的处理
         Type genericParameterType = methodParameter.getGenericParameterType();
         if (genericParameterType.equals(String.class)) {
-            return JSON.toJSONString(new ResultVo<>(ResultVoCodeType.SUCCESS, data));
+            return JSON.toJSONString(new ResultVo<>(ResultVoCode.SUCCESS, data));
         }
 
         // 判断返回的类型是否就是试图对象，如果是的直接返回前端
@@ -53,7 +53,7 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
         }
 
         // 将数据包装到视图对象中，返回给前端
-        return new ResultVo<>(ResultVoCodeType.SUCCESS, data);
+        return new ResultVo<>(ResultVoCode.SUCCESS, data);
     }
 
 }

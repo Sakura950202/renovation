@@ -3,7 +3,7 @@ package com.renovation.rose.module.customer.service.impl;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.renovation.common.enums.APIExceptionCodeType;
+import com.renovation.common.enums.APIExceptionCode;
 import com.renovation.common.exception.APIException;
 import com.renovation.rose.module.customer.dto.CustomerDto;
 import com.renovation.rose.module.customer.entity.Customer;
@@ -38,7 +38,7 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
                         .eq(StringUtils.isNotBlank(customerDto.getName()), Customer::getName, customerDto.getName())
         );
         if (Objects.nonNull(customerTemp)) {
-            throw new APIException(APIExceptionCodeType.DATA_HAS_EXISTS);
+            throw new APIException(APIExceptionCode.DATA_HAS_EXISTS);
         }
         // 执行新增会修改
         Customer customer = customerDtoMapStruct.toEntity(customerDto);

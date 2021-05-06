@@ -9,34 +9,34 @@ import lombok.Getter;
  * @Date: 2020/4/13 20:43
  **/
 @Getter
-public enum APIExceptionCodeType {
+public enum APIExceptionCode {
 
     /**
      * 数据未找到
      */
-    DATA_NOT_FOUND("数据未找到!"),
+    DATA_NOT_FOUND("数据未找到！"),
 
     /**
-     * 数据已存在
+     * 数据新增失败
      */
-    DATA_HAS_EXISTS("数据已存在!"),
+    DATA_HAS_EXISTS("数据新增失败："),
 
     /**
-     * 数据不能删除
+     * 数据删除失败
      */
-    DATA_NOT_DELETE("数据不能删除!"),
+    DATA_DELETE_FAIL("数据删除失败！"),
 
     /**
-     * 数据不能修改
+     * 数据修改失败
      */
-    DATA_NOT_UPDATE("数据不能修改");
+    DATA_UPDATE_FAIL("数据修改失败：");
 
     /**
      * 描述
      */
     private String describe;
 
-    APIExceptionCodeType(String describe) {
+    APIExceptionCode(String describe) {
         this.describe = describe;
     }
 }

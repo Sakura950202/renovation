@@ -9,7 +9,7 @@ import lombok.Getter;
  * @Date: 2020/4/5 17:29
  **/
 @Getter
-public enum ResultVoCodeType {
+public enum ResultVoCode {
 
     /**
      * 响应成功
@@ -36,7 +36,7 @@ public enum ResultVoCodeType {
      */
     private String describe;
 
-    ResultVoCodeType(Integer code, String describe) {
+    ResultVoCode(Integer code, String describe) {
         this.code = code;
         this.describe = describe;
     }

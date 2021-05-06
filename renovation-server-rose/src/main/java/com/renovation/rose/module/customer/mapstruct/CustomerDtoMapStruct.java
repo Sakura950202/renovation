@@ -1,6 +1,6 @@
 package com.renovation.rose.module.customer.mapstruct;
 
-import com.renovation.common.mapstruct.BaseMapStruct;
+import com.renovation.common.config.BaseMapStruct;
 import com.renovation.rose.module.customer.dto.CustomerDto;
 import com.renovation.rose.module.customer.entity.Customer;
 import org.mapstruct.Mapper;

@@ -1,7 +1,7 @@
 package com.renovation.common.util;
 
 import com.renovation.common.annotation.ExcelAttribute;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
@@ -25,7 +25,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Author SAKURA
  * @Date 2021/4/6 10:20
  */
-@Log4j2
+@Slf4j
 public class ExportUtil<T> {
 
     /**

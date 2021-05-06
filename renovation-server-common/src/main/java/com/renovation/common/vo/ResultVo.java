@@ -1,8 +1,7 @@
 package com.renovation.common.vo;
 
-import com.renovation.common.enums.ResultVoCodeType;
+import com.renovation.common.enums.ResultVoCode;
 import lombok.Data;
-import lombok.Getter;
 
 /**
  * @ClassName: SimpleVo
@@ -34,9 +33,9 @@ public class ResultVo<T> {
         this.data = data;
     }
 
-    public ResultVo(ResultVoCodeType resultVoCodeType, T data) {
-        this.code = resultVoCodeType.getCode();
-        this.message = resultVoCodeType.getDescribe();
+    public ResultVo(ResultVoCode resultVoCode, T data) {
+        this.code = resultVoCode.getCode();
+        this.message = resultVoCode.getDescribe();
         this.data = data;
     }
 

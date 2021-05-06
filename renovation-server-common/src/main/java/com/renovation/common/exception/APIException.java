@@ -1,6 +1,6 @@
 package com.renovation.common.exception;
 
-import com.renovation.common.enums.APIExceptionCodeType;
+import com.renovation.common.enums.APIExceptionCode;
 import lombok.Getter;
 
 /**
@@ -21,8 +21,12 @@ public class APIException extends RuntimeException {
         super(message);
     }
 
-    public APIException(APIExceptionCodeType apiExceptionCodeType) {
-        this.message = apiExceptionCodeType.getDescribe();
+    public APIException(APIExceptionCode apiExceptionCode) {
+        this.message = apiExceptionCode.getDescribe();
+    }
+
+    public APIException(APIExceptionCode apiExceptionCode, String message) {
+        this.message = apiExceptionCode.getDescribe() + message;
     }
 
 }

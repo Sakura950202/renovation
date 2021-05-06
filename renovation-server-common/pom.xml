@@ -63,6 +63,12 @@
             <artifactId>hibernate-validator</artifactId>
         </dependency>
 
+        <!--		openfeign的依赖，使用父项目的版本号-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
         <!--        hystrix断路器的依赖，使用父项目的版本号-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

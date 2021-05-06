@@ -1,4 +1,4 @@
-package com.renovation.gardenia.handler;
+package com.renovation.gardenia.config;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;

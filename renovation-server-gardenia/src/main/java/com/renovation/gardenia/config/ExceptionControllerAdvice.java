@@ -1,6 +1,6 @@
-package com.renovation.gardenia.advice;
+package com.renovation.gardenia.config;
 
-import com.renovation.common.enums.ResultVoCodeType;
+import com.renovation.common.enums.ResultVoCode;
 import com.renovation.common.exception.APIException;
 import com.renovation.common.vo.ResultVo;
 import org.springframework.validation.ObjectError;
@@ -35,7 +35,7 @@ public class ExceptionControllerAdvice {
         ObjectError objectError = e.getBindingResult().getAllErrors().get(0);
 
         // 将异常信息组装成视图，返回给前端
-        return new ResultVo<>(ResultVoCodeType.VALIDATE_FAILED, objectError.getDefaultMessage());
+        return new ResultVo<>(ResultVoCode.VALIDATE_FAILED, objectError.getDefaultMessage());
     }
 
     /**
@@ -46,7 +46,7 @@ public class ExceptionControllerAdvice {
      */
     @ExceptionHandler(APIException.class)
     public ResultVo<String> APIExceptionHandler(APIException e) {
-        return new ResultVo<>(ResultVoCodeType.FAILED, e.getMessage());
+        return new ResultVo<>(ResultVoCode.FAILED, e.getMessage());
     }
 
 }

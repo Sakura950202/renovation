@@ -1,4 +1,4 @@
-package com.renovation.rose.handler;
+package com.renovation.rose.config;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;
