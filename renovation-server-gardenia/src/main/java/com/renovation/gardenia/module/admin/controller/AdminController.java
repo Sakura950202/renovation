@@ -37,7 +37,7 @@ public class AdminController {
 
     @ApiOperation("获取远程会员信息")
     @GetMapping("/getFeignCustomer")
-    public ResultVo getFeignCustomer(Integer id){
+    public ResultVo getFeignCustomer(Integer id) {
         return testFeign.getFeignCustomer(id);
     }
 

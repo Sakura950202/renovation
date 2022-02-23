@@ -29,12 +29,12 @@ public enum ResultVoCode {
     /**
      * 状态码
      */
-    private Integer code;
+    private final Integer code;
 
     /**
      * 描述
      */
-    private String describe;
+    private final String describe;
 
     ResultVoCode(Integer code, String describe) {
         this.code = code;

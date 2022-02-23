@@ -5,7 +5,7 @@ import lombok.Data;
 
 /**
  * @ClassName: SimpleVo
- * @Description: TODO 数据响应体视图对象
+ * @Description: TODO 统一数据响应体视图对象
  * @Author: SAKURA
  * @Date: 2020/4/5 17:25
  **/

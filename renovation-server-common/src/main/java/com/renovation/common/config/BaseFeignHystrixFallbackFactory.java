@@ -16,6 +16,7 @@ public abstract class BaseFeignHystrixFallbackFactory<T> implements FallbackFact
 
     @Override
     public T create(Throwable cause) {
+        //noinspection unchecked
         return (T) Proxy.newProxyInstance(
                 this.getClass().getClassLoader(),
                 new Class[]{this.getProxyClass()},
@@ -27,9 +28,9 @@ public abstract class BaseFeignHystrixFallbackFactory<T> implements FallbackFact
     }
 
     /**
-     * 获取代理类实现接口
+     * 获取被代理类的类对象
      *
-     * @return 接口类对象
+     * @return 类对象
      */
     public abstract Class<T> getProxyClass();
 

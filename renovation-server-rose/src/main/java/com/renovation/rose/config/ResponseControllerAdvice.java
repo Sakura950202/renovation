@@ -1,6 +1,7 @@
 package com.renovation.rose.config;
 
 import com.alibaba.fastjson.JSON;
+import com.renovation.common.annotation.NotResponseBody;
 import com.renovation.common.enums.ResultVoCode;
 import com.renovation.common.vo.ResultVo;
 import org.springframework.core.MethodParameter;
@@ -30,11 +31,10 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
 
     @Override
     public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> aClass) {
-        // 这里是通过反射得到的
-        // 如果接口返回的类型本身就是ResultVO那就没有必要进行额外的操作，返回false
-        boolean equals = methodParameter.getGenericParameterType().equals(ResultVo.class);
 
-        return !equals;
+        // 这里是通过反射得到的
+        // 如果接口返回的类型本身就是ResultVO，或者使用了自定义注解，那就没有必要进行额外的操作，返回false
+        return !(methodParameter.getGenericParameterType().equals(ResultVo.class) || methodParameter.hasMethodAnnotation(NotResponseBody.class));
     }
 
     @Override

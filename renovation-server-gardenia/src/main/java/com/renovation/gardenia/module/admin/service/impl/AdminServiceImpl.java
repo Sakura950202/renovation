@@ -20,7 +20,7 @@ import javax.annotation.Resource;
  * @Date 2020/12/09 17:03
  * @Version 1.0
  */
-@Service("adminService")
+@Service
 public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements AdminService {
 
     @Resource

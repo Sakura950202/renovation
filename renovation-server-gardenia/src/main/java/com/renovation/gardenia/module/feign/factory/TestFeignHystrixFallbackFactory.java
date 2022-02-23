@@ -11,8 +11,6 @@ import org.springframework.stereotype.Component;
  * @Description TODO 用来处理测试远程调用服务降级
  * @Author SAKURA
  * @Date 2021/1/19 22:58
- *
- * 使用JDK的动态代理实现统一处理远程调用失败信息
  */
 @Component
 @Slf4j

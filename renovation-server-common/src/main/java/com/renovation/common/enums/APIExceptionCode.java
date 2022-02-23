@@ -34,7 +34,7 @@ public enum APIExceptionCode {
     /**
      * 描述
      */
-    private String describe;
+    private final String describe;
 
     APIExceptionCode(String describe) {
         this.describe = describe;
