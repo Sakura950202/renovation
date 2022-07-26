@@ -43,7 +43,7 @@
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
         <mybatis-plus-generator.version>3.4.1</mybatis-plus-generator.version>
         <velocity.version>2.3</velocity.version>
-        <swagger.version>1.9.1.RELEASE</swagger.version>
+        <swagger.version>3.0.0</swagger.version>
         <validation.version>2.0.1.Final</validation.version>
         <hibernate.validator.version>6.1.0.Final</hibernate.validator.version>
         <nacos.version>2.2.1.RELEASE</nacos.version>
@@ -179,8 +179,8 @@
 
             <!--            swagger开发文档的依赖-->
             <dependency>
-                <groupId>com.spring4all</groupId>
-                <artifactId>swagger-spring-boot-starter</artifactId>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
 

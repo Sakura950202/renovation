@@ -23,8 +23,8 @@
 
         <!--		swagger的依赖，使用父项目的版本号-->
         <dependency>
-            <groupId>com.spring4all</groupId>
-            <artifactId>swagger-spring-boot-starter</artifactId>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
         </dependency>
 
         <!--        gateway的依赖，使用父项目的版本号-->
